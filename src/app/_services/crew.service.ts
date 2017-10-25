@@ -37,15 +37,17 @@ export class CrewService {
     this.crewList = crewDB;
   }
 
-  getAllCrew() {
-    return this.crewList;
+  getAllCrew(): Promise<Crew[]> {
+    return Promise.resolve(this.crewList);
   }
 
-  getOneCrew(id:number) {
-    console.log('inside getOneCrew');
+  // This will return a promise because data will be returned asynchronously
+  getOneCrew(id:number): Promise<Crew> {
+    let foundCrew;
     this.crewList.forEach(crew => {
-      if (crew.id == id) { console.log(crew); return crew; }
+      if (crew.id == id) { foundCrew = crew; }
     });
+    return Promise.resolve(foundCrew);
   }
 
 }

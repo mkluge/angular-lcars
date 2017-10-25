@@ -7,28 +7,29 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { CrewComponent } from './crew/crew.component';
-import { CrewListComponent } from './crew/crew-list/crew-list.component';
-import { CrewMemberComponent } from './crew/crew-member/crew-member.component';
+import { CrewModule } from './crew/crew.module';
+
 import { EquipmentComponent } from './equipment/equipment.component';
 import { EquipmentListComponent } from './equipment/equipment-list/equipment-list.component';
-import { EquipmentItemComponent } from './equipment/equipment-item/equipment-item.component';
+import { EquipmentDetailsComponent } from './equipment/equipment-details/equipment-details.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CrewComponent,
-    CrewListComponent,
-    CrewMemberComponent,
     EquipmentComponent,
     EquipmentListComponent,
-    EquipmentItemComponent,
+    EquipmentDetailsComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    CrewModule,
+    AppRoutingModule, // imported last to allow Module routes to be matched first
+
   ],
   providers: [  ],
   bootstrap: [AppComponent]

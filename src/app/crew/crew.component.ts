@@ -1,3 +1,4 @@
+import { CrewListComponent } from './crew-list/crew-list.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
