@@ -1,6 +1,12 @@
 # AngularLcars
 
+This project attempts to create a web app that uses the LCARS user interface from Star Trek: The Next Generation. Mostly to impress my 8-year-old self.
+
+## Dependencies:
+[LCARS](https://github.com/joernweissenborn/lcars)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.7.
+
 
 ## Development server
 
