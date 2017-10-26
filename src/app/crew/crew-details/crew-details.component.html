@@ -1,2 +1,2 @@
 <h2 *ngIf="!crew">Loading...</h2>
-<h2 *ngIf="crew">{{ crew.givenName}} {{ crew.surname }}</h2>
+<h2 *ngIf="crew">{{ crew.getFullName() }} </h2>
