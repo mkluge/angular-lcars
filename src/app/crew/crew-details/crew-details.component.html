@@ -1,2 +1,42 @@
-<h2 *ngIf="!crew">Loading...</h2>
-<h2 *ngIf="crew">{{ crew.getFullName() }} </h2>
+
+<div *ngIf="crew">
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{ crew.getFullName() }}</h3>
+    </div>
+    <div class="panel-body">
+      <img src="{{ crew.imageUrl }}" alt="{{ crew.getFullName() }} Portrait">
+
+      <ul class="list-group">
+        <li class="list-group-item">
+          <strong>Rank: </strong>{{ crew.rank }}</li>
+        <li class="list-group-item">
+          <strong>Position: </strong>{{ crew.position }}</li>
+        <li *ngIf="crew.birthPlace" class="list-group-item">
+          <strong>Home: </strong>{{ crew.birthPlace }}</li>
+        <li *ngIf="crew.birthYear" class="list-group-item">
+          <strong>Age: </strong>{{ 2364 - crew.birthYear }} (at beginning of series)
+        </li>
+        <li class="list-group-item"><strong>Portrayed by: </strong>{{ crew.actor }}</li>
+      </ul>
+      <div class="panel-content">
+        {{ crew.bio }}
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="!crew">
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">Standing by...</h3>
+    </div>
+    <div class="panel-body">
+      <img src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-166536.jpg" alt="">
+      <div class="panel-content">
+        Please select a crew member from the list.
+      </div>
+    </div>
+  </div>
+</div>
+
+

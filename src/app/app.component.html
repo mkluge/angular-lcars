@@ -1,4 +1,4 @@
-<div class="lcars-container">
+<div class="container">
   <header class="lcars-row">
     <div class="lcars-column u-7-8 lcars-divider bottom lcars-purple-blue-divide">
       <div class="lcars-row">
@@ -10,22 +10,22 @@
     <div class="lcars-column u-1-8 lcars-elbow right top lcars-purple-bg-modern"></div>
   </header>
 
-  <div class="lcars-row">
-    <div class="lcars-column u-1-8 lcars-elbow left bottom lcars-orange-bg">
-
-    </div>
+  <div class="row">
+    <div class="lcars-column u-1-8 lcars-elbow left bottom lcars-orange-bg"></div>
     <div class="lcars-column u-6-8 lcars-divider lcars-orange-blue-divide"></div>
-
   </div>
-    <div class="lcars-row">
-      <div class="lcars-column u-1-8 lcars-menu ">
-        <li *ngFor="let route of routes" class="lcars-orange-bg" routerLinkActive="active">
+  <div class="row">
+    <div class="col-md-2 bs-component">
+      <ul class="btn-group-vertical">
+        <li *ngFor="let route of routes" class="btn btn-warning" routerLinkActive="active">
           <a [routerLink]="route.route">{{ route.name }}</a>
         </li>
-      </div>
-      <div class="lcars-column u-6-8">
-        <router-outlet></router-outlet>
-      </div>
+      </ul>
+
     </div>
+    <div class="col-md-8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 
 </div>

@@ -44,9 +44,35 @@ export const CREW: Crew[] = [
     rank: 'Ensign',
     position: 'Conn Officer',
     actor: 'Michelle Forbes',
-    imageUrl: 'https://vignette3.wikia.nocookie.net/memoryalpha/images/a/af/Ro_firing_phaser.jpg/revision/latest?cb=20150228075240&path-prefix=en',
+    imageUrl: 'http://tng.trekcore.com/hd/albums/season-5/5x03/ensign-ro-hd-144.jpg',
     bio: `Ro Laren was a Bajoran national who formerly served in Starfleet aboard the Federation starship USS Enterprise-D before finally sympathizing with, and later defecting to, the Maquis.`,
     getFullName: getBajoranName,
-
+  },
+  {
+    id: 4,
+    surname: `Barclay`,
+    givenName: 'Reginald',
+    birthYear: 2340,
+    birthPlace: 'Cleveland, Ohio, USA, Earth',
+    rank: 'Lieutenant',
+    position: 'Systems Diagnostic Engineer',
+    actor: 'Dwight Schultz',
+    imageUrl: 'https://78.media.tumblr.com/cbe61ee05e5823d6f647515904336e87/tumblr_o0rgq3ZV6M1uz53k3o1_500.jpg',
+    bio: `Lieutenant Reginald Endicott Barclay III (often referred to as "Reg") was a highly talented Human Starfleet systems diagnostic engineer who lived in the 24th century. In his early days aboard the Enterprise-D, he frequently displayed nervous behavior, demonstrated a noticeable lack of confidence, stammered frequently, was extremely introverted, and occasionally bumbled. These traits aroused the derision of some of his shipmates on the USS Enterprise-D – with some even going as far as calling him "Lieutenant Broccoli" behind his back or, on unfortunate occasions, to his face.`,
+    getFullName: getHumanName,
+  },
+  {
+    id: 5,
+    surname: `Gomez`,
+    givenName: `Sonya`,
+    birthYear: 2343,
+    birthPlace: `Puerto Rico, Earth`,
+    rank: `Ensign`,
+    position: `Engineer`,
+    actor: `Lycia Naff`,
+    imageUrl: `http://powet.tv/powetblog/wp-content/uploads/2012/06/lycia_naff_as_ensign_sonya_gomez_in_star_trek_the_next_generation.jpg`,
+    bio: `Ensign Sonya Gomez was a female Human Starfleet engineering officer serving in the late-24th century. Her specialty was in antimatter. Opinionated and vocal, she also had a tendency to speak quickly when excited.`,
+    getFullName: getHumanName,
   }
+
 ];
