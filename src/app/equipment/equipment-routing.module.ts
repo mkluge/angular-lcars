@@ -1,10 +1,10 @@
-import { CrewComponent } from './crew.component';
+import { EquipmentComponent } from './equipment.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 const crewRoutes = [
-  { path: 'crew', component: CrewComponent },
-  { path: 'crew/:id', component: CrewComponent }
+  { path: 'equipment', component: EquipmentComponent },
+  { path: 'equipment/:id', component: EquipmentComponent }
 ];
 
 @NgModule({
@@ -15,4 +15,4 @@ const crewRoutes = [
     RouterModule
   ]
 })
-export class CrewRoutingModule {}
+export class EquipmentRoutingModule {}

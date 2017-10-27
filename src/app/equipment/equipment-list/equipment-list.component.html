@@ -1,3 +1,10 @@
-<p>
-  equipment-list works!
-</p>
+<h2>Equipment List</h2>
+
+<div class="col-md-3">
+    <ul>
+        <li *ngFor="let equipment of equipmentList" class="btn btn-block btn-warning btn-lg" routerLinkActive="active"><a routerLink="/equipment/{{equipment.id}}">{{ equipment.name }}</a></li>
+      </ul>
+</div>
+<div class="col-md-9">
+  <app-equipment-details [equipment]="selectedEquipment"></app-equipment-details>
+</div>

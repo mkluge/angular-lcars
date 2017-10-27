@@ -1,0 +1,10 @@
+li {
+  float: left;
+}
+li > a {
+  display: block;
+}
+ h2 {
+   margin-top: -2.6rem;
+   padding: 0 1rem;
+ }

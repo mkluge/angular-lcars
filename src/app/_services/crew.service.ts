@@ -1,11 +1,6 @@
 import { Crew } from './../_models/crew';
 import { Injectable } from '@angular/core';
-import { Resolve } from '@angular/router';
 import { CREW } from '../_data/crew.data';
-
-function getFullNameFunction() {
-  return this.givenName + ' ' + this.surname
-}
 
 @Injectable()
 export class CrewService {
@@ -15,11 +10,12 @@ export class CrewService {
     this.crewList = CREW;
   }
 
+
+    // These GET methods will return a promise because data will be returned asynchronously
   getAllCrew(): Promise<Crew[]> {
     return Promise.resolve(this.crewList);
   }
 
-  // This will return a promise because data will be returned asynchronously
   getOneCrew(id:number): Promise<Crew> {
     let foundCrew;
     this.crewList.forEach(crew => {
@@ -28,4 +24,4 @@ export class CrewService {
     return Promise.resolve(foundCrew);
   }
 
-}
+} // end class

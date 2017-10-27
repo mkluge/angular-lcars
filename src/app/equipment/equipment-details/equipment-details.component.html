@@ -1,3 +1,29 @@
-<p>
-  equipment-details works!
-</p>
+<div *ngIf="equipment">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{ equipment.name }}</h3>
+      </div>
+      <div class="panel-body">
+        <img src="{{ equipment.imageUrl }}" alt="Image of {{equipment.name}}">
+
+        <div class="panel-content">
+          {{ equipment.description }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!equipment">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">Standing by...</h3>
+      </div>
+      <div class="panel-body">
+        <img src="https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-166536.jpg" alt="">
+        <div class="panel-content">
+          Please select equipment from the list.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
