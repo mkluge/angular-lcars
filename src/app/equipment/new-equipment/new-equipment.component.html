@@ -1,0 +1,37 @@
+<div class="row">
+  <!-- FORM -->
+  <div class="col-md-5">
+    <form #eqForm="ngForm" (ngSubmit)="onSubmit(eqForm)">
+      <div class="form-group">
+        <label for="name">Equipment Name</label>
+        <input class="form-control" type="text" name="name" [(ngModel)]="equipment.name" #name="ngModel" required minlength="1">
+        <!-- show error message only if has been touched and is not valid -->
+        <small class="text-danger" [hidden]="name.valid || (name.pristine && !eqForm.submitted)">Name is required</small>
+      </div>
+
+      <div class="form-group">
+          <label for="imageUrl">Image Url</label>
+          <input class="form-control" type="text" name="imageUrl" [(ngModel)]="equipment.imageUrl" #imageUrl="ngModel" required>
+          <!-- show error message only if has been touched and is not valid -->
+          <small class="text-danger" [hidden]="imageUrl.valid || imageUrl.pristine">Image Url is required</small>
+      </div>
+
+      <div class="form-group">
+          <label for="description">Description</label>
+          <input class="form-control" type="text" name="description" [(ngModel)]="equipment.description" #description="ngModel" required>
+          <!-- show error message only if has been touched and is not valid -->
+          <small class="text-danger" [hidden]="description.valid || description.pristine">Descripton is required</small>
+      </div>
+
+      <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+  </div>
+
+<!-- PREVIEW -->
+<div class="col-md-7">
+    <p>{{equipment.name}}</p>
+    <img *ngIf="equipment.imageUrl" src="{{equipment.imageUrl}}" alt="">
+    <p>{{equipment.description}}</p>
+</div>
+
+</div>

@@ -8,6 +8,7 @@ import { EquipmentComponent } from './equipment.component';
 import { EquipmentRoutingModule } from './equipment-routing.module';
 
 import { EquipmentService } from './../_services/equipment.service';
+import { NewEquipmentComponent } from './new-equipment/new-equipment.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { EquipmentService } from './../_services/equipment.service';
   declarations: [
     EquipmentComponent,
     EquipmentListComponent,
-    EquipmentDetailsComponent
+    EquipmentDetailsComponent,
+    NewEquipmentComponent
   ],
   providers: [ EquipmentService ]
 })

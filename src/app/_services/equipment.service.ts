@@ -22,4 +22,16 @@ export class EquipmentService {
     return Promise.resolve(foundEquipment);
   }
 
+  getEquipmentListLength() {
+    return this.equipmentList.length;
+  }
+
+  saveNewEquipment(equipment) {
+    const newEquipment = equipment;
+    newEquipment.id = this.equipmentList.length + 1;
+    console.log('newEquipment: ', newEquipment);
+    this.equipmentList.push(newEquipment);
+    console.log(this.equipmentList);
+  }
+
 } // end class

@@ -9,12 +9,12 @@
 
 html, body {
   background: black;
-  font-family: 'Helvetica Ultra Compressed', sans-serif;
+  /* font-family: 'Helvetica Ultra Compressed', sans-serif; */
 }
 
 a, a:link, a:visited, a:hover {
   color: #000;
   text-decoration: none;
   font-weight: lighter;
-  font-size: x-large;
+  font-size: large;
 }
