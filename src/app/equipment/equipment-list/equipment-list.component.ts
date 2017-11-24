@@ -1,16 +1,16 @@
 import { ActivatedRoute } from '@angular/router';
 import { EquipmentService } from './../../_services/equipment.service';
 import { Equipment } from './../../_models/equipment';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: "app-equipment-list",
-  templateUrl: "./equipment-list.component.html",
-  styleUrls: ["./equipment-list.component.css"]
+  selector: 'app-equipment-list',
+  templateUrl: './equipment-list.component.html',
+  styleUrls: ['./equipment-list.component.css']
 })
 export class EquipmentListComponent implements OnInit {
   equipmentList: Equipment[];
-  selectedEquipment: Equipment;
+  @Output()selectedEquipment: EventEmitter<Equipment> = new EventEmitter();
 
   constructor(
     private equipmentService: EquipmentService,
@@ -25,7 +25,7 @@ export class EquipmentListComponent implements OnInit {
       this.route.params.subscribe(event => {
         this.equipmentService
           .getOneEquipment(this.route.snapshot.params['id'])
-          .then(equipment => this.selectedEquipment = equipment);
+          .then(equipment => this.selectedEquipment.emit(equipment));
       });
   }
 

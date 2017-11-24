@@ -1,14 +1,3 @@
-<h2>Crew List</h2>
-
-<div class="col-md-3">
-    <ul>
-        <li *ngFor="let crew of crewList" class="btn btn-block btn-warning btn-lg" routerLinkActive="active"><a routerLink="/crew/{{crew.id}}">{{ crew.surname }}</a></li>
-      </ul>
-</div>
-<div class="col-md-9">
-  <app-crew-details [crew]="selectedCrew"></app-crew-details>
-</div>
-
-
-
-
+<ul>
+  <li *ngFor="let crew of crewList" class="btn btn-block btn-warning btn-lg" routerLinkActive="active"><a routerLink="/crew/{{crew.id}}">{{ crew.surname }}</a></li>
+</ul>

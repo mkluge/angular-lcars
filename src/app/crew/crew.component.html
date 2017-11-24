@@ -1,4 +1,13 @@
+<h2>Crew List</h2>
 <div class="row">
-  <app-crew-list></app-crew-list>
+
+  <div class="col-md-3">
+    <app-crew-list (selectedCrew)="onCrewSelected($event)"></app-crew-list>
+  </div>
+  <div class="col-md-9">
+    <app-crew-details [crew]="selectedCrew"></app-crew-details>
+  </div>
 </div>
+
+
 

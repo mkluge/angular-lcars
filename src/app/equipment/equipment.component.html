@@ -1,3 +1,9 @@
+<h2>Equipment List</h2>
 <div class="row">
-    <app-equipment-list></app-equipment-list>
+  <div class="col-md-3">
+    <app-equipment-list (selectedEquipment)="onEquipmentSelected($event)"></app-equipment-list>
+  </div>
+  <div class="col-md-9">
+    <app-equipment-details [equipment]="selectedEquipment"></app-equipment-details>
+  </div>
 </div>

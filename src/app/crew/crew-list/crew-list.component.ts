@@ -1,7 +1,7 @@
 import { ActivatedRoute } from '@angular/router';
 import { Crew } from './../../_models/crew';
 import { CrewService } from './../../_services/crew.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-crew-list',
@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrewListComponent implements OnInit {
   crewList: Crew[];
-  selectedCrew: Crew;
+  @Output() selectedCrew: EventEmitter<Crew> = new EventEmitter();
 
   constructor(
     private crewService: CrewService,
@@ -25,7 +25,7 @@ export class CrewListComponent implements OnInit {
     this.route.params.subscribe(event => {
       this.crewService
         .getOneCrew(this.route.snapshot.params['id'])
-        .then(crew => this.selectedCrew = crew);
+        .then(crew => this.selectedCrew.emit(crew));
     });
   }
 

@@ -1,3 +1,4 @@
+import { Equipment } from './../_models/equipment';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./equipment.component.css']
 })
 export class EquipmentComponent implements OnInit {
+  selectedEquipment: Equipment;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onEquipmentSelected(equipment) {
+    this.selectedEquipment = equipment;
   }
 
 }
