@@ -1,3 +1,4 @@
 <ul>
   <li *ngFor="let crew of crewList" class="btn btn-block btn-warning btn-lg" routerLinkActive="active"><a routerLink="/crew/{{crew.id}}">{{ crew.surname }}</a></li>
+  <li class="btn btn-block btn-warning btn-lg" routerLinkActive="active"><a routerLink="/crew/new">Add New</a></li>
 </ul>

@@ -1,0 +1,77 @@
+<div class="row">
+    <!-- FORM -->
+    <div class="col-md-5">
+      <form #crwForm="ngForm" (ngSubmit)="onSubmit(crwForm)">
+        <div class="form-group">
+          <label for="name">Surname</label>
+          <input class="form-control" type="text" name="surname" [(ngModel)]="crew.surname" #surname="ngModel" required minlength="1">
+          <!-- show error message only if has been touched and is not valid -->
+          <small class="text-danger" [hidden]="surname.valid || (surname.pristine && !crwForm.submitted)">Surname is required</small>
+        </div>
+
+        <div class="form-group">
+          <label for="givenName">Given Name</label>
+          <input class="form-control" type="text" name="givenName" [(ngModel)]="crew.givenName" #givenName="ngModel">
+        </div>
+
+        <div class="form-group">
+          <label for="birthYear">Birth Year</label>
+          <input class="form-control" type="text" name="birthYear" [(ngModel)]="crew.birthYear" #birthYear="ngModel">
+        </div>
+
+        <div class="form-group">
+          <label for="birthPlace">Birth Place</label>
+          <input class="form-control" type="text" name="birthPlace" [(ngModel)]="crew.birthPlace" #birthPlace="ngModel">
+          <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="isBajoran" [(ngModel)]="crew.isBajoran" #isBajora="ngModel">
+                Is Bajoran?
+              </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+          <label for="rank">Rank</label>
+          <input class="form-control" type="text" name="rank" [(ngModel)]="crew.rank" #rank="ngModel">
+          <!-- show error message only if has been touched and is not valid -->
+          <small class="text-danger" [hidden]="rank.valid || (rank.pristine && !crwForm.submitted)">Rank is required</small>
+        </div>
+
+        <div class="form-group">
+          <label for="position">Position</label>
+          <input class="form-control" type="text" name="position" [(ngModel)]="crew.position" #position="ngModel">
+          <!-- show error message only if has been touched and is not valid -->
+          <small class="text-danger" [hidden]="position.valid || (position.pristine && !crwForm.submitted)">Position is required</small>
+        </div>
+
+        <div class="form-group">
+          <label for="actor">Performed By (Actor Name)</label>
+          <input class="form-control" type="text" name="actor" [(ngModel)]="crew.actor" #actor="ngModel">
+          <!-- show error message only if has been touched and is not valid -->
+          <small class="text-danger" [hidden]="actor.valid || (actor.pristine && !crwForm.submitted)">Actor Name is required</small>
+        </div>
+
+        <div class="form-group">
+            <label for="imageUrl">Image Url</label>
+            <input class="form-control" type="text" name="imageUrl" [(ngModel)]="crew.imageUrl" #imageUrl="ngModel" required>
+            <!-- show error message only if has been touched and is not valid -->
+            <small class="text-danger" [hidden]="imageUrl.valid || imageUrl.pristine">Image Url is required</small>
+        </div>
+
+        <div class="form-group">
+            <label for="bio">Biographical Information</label>
+            <textarea class="form-control" name="bio" [(ngModel)]="crew.bio" #bio="ngModel" rows="5" required ></textarea>
+            <!-- show error message only if has been touched and is not valid -->
+            <small class="text-danger" [hidden]="bio.valid || bio.pristine">Descripton is required</small>
+        </div>
+
+        <button class="btn btn-success" type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- PREVIEW -->
+    <div class="col-md-7">
+        <app-crew-details [crew]="crew"></app-crew-details>
+    </div>
+
+  </div>

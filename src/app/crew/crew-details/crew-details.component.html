@@ -1,10 +1,10 @@
 <div *ngIf="crew">
   <div class="panel panel-info">
     <div class="panel-heading">
-      <h3 class="panel-title">{{ crew.getFullName() }}</h3>
+      <h3 class="panel-title">{{ crew.isBajoran ? crew.surname + ' ' + crew.givenName : crew.givenName + ' ' + crew.surname }}</h3>
     </div>
     <div class="panel-body">
-      <img src="{{ crew.imageUrl }}" alt="{{ crew.getFullName() }} Portrait">
+      <img src="{{ crew.imageUrl }}" alt="Portrait of {{ crew.isBajoran ? crew.surname + ' ' + crew.givenName : crew.givenName + ' ' + crew.surname }}">
 
       <ul class="list-group">
         <li class="list-group-item">
@@ -14,7 +14,7 @@
         <li *ngIf="crew.birthPlace" class="list-group-item">
           <strong>Home: </strong>{{ crew.birthPlace }}</li>
         <li *ngIf="crew.birthYear" class="list-group-item">
-          <strong>Age: </strong>{{ 2364 - crew.birthYear }} (at beginning of series)
+          <strong>Age: </strong>{{ 2364 - crew.birthYear }} (at beginning of TNG)
         </li>
         <li class="list-group-item"><strong>Portrayed by: </strong>{{ crew.actor }}</li>
       </ul>

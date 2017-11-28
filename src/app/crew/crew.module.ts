@@ -8,6 +8,7 @@ import { CrewDetailsComponent } from './crew-details/crew-details.component';
 import { CrewRoutingModule } from './crew-routing.module';
 
 import { CrewService } from '../_services/crew.service';
+import { NewCrewComponent } from './new-crew/new-crew.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { CrewService } from '../_services/crew.service';
   declarations: [
     CrewComponent,
     CrewListComponent,
-    CrewDetailsComponent
+    CrewDetailsComponent,
+    NewCrewComponent
   ],
   providers: [ CrewService ]
 })

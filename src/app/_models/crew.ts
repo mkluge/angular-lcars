@@ -9,6 +9,6 @@ export interface Crew {
   actor: string;
   imageUrl: string;
   bio: string;
-  getFullName: any;
+  isBajoran: boolean;
 }
 

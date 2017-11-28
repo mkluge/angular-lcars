@@ -27,11 +27,9 @@
     </form>
   </div>
 
-<!-- PREVIEW -->
-<div class="col-md-7">
-    <p>{{equipment.name}}</p>
-    <img *ngIf="equipment.imageUrl" src="{{equipment.imageUrl}}" alt="">
-    <p>{{equipment.description}}</p>
-</div>
+  <!-- PREVIEW -->
+  <div class="col-md-7">
+      <app-equipment-details [equipment]="equipment"></app-equipment-details>
+  </div>
 
 </div>
