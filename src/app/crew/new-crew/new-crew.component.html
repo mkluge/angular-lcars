@@ -1,7 +1,7 @@
 <div class="row">
     <!-- FORM -->
     <div class="col-md-5">
-      <form #crwForm="ngForm" (ngSubmit)="onSubmit(crwForm)">
+      <form #crwForm="ngForm" (ngSubmit)="onSubmit(crwForm.value)">
         <div class="form-group">
           <label for="name">Surname</label>
           <input class="form-control" type="text" name="surname" [(ngModel)]="crew.surname" #surname="ngModel" required minlength="1">

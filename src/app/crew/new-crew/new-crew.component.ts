@@ -35,7 +35,6 @@ export class NewCrewComponent implements OnInit {
 
   onSubmit(formValue) {
     this.crew = formValue;
-    console.log('Is Bajoran? ' + this.crew.isBajoran);
     this.crewService.saveNewCrew(this.crew);
     this.router.navigate(['/crew', this.crew.id]);
   }
