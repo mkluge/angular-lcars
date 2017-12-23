@@ -4,15 +4,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { NewEquipmentComponent } from './new-equipment/new-equipment.component';
 
-const crewRoutes = [
-  { path: 'equipment', component: EquipmentComponent },
+const equipmentRoutes = [
   { path: 'equipment/new', component: NewEquipmentComponent },
-  { path: 'equipment/:id', component: EquipmentComponent }
+  { path: 'equipment/:id', component: EquipmentComponent },
+  { path: 'equipment', component: EquipmentComponent }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forChild(crewRoutes)
+    RouterModule.forChild(equipmentRoutes)
   ],
   exports: [
     RouterModule
