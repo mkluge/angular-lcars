@@ -10,7 +10,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class EquipmentListComponent implements OnInit {
   equipmentList: Equipment[];
-  @Output()selectedEquipment: EventEmitter<Equipment> = new EventEmitter();
+  @Output() selectedEquipment: EventEmitter<Equipment> = new EventEmitter();
 
   constructor(
     private equipmentService: EquipmentService,
@@ -25,7 +25,10 @@ export class EquipmentListComponent implements OnInit {
       this.route.params.subscribe(event => {
         this.equipmentService
           .getOneEquipment(this.route.snapshot.params['id'])
-          .then(equipment => this.selectedEquipment.emit(equipment));
+          .then(equipment => {
+            this.selectedEquipment.emit(equipment);
+      })
+
       });
   }
 

@@ -1,9 +1,21 @@
-# AngularLcars
+# LcarsAngular
 
-This project attempts to create a web app that uses the LCARS user interface from Star Trek: The Next Generation. Mostly to impress my 8-year-old self.
+This project started as an attempt to create a web app that uses the LCARS user interface from Star Trek: The Next Generation. Mostly to impress my 8-year-old self. It became an opportunity to show off my ability with Angular 2+ by developing a seemingly simple interface that follows a common pattern, but utilizes some useful Angular tricks. All content is lifted straight from [Memory Alpha](http://memory-alpha.wikia.com/wiki/Portal:Main)
+
+Features of this app:
+- __Modularity__: Both Crew and Equipment are self-contained modules
+- __Routing__: Each module has its own routing logic, AppRoutingModule defers Crew and Equipment routing to their respective routing modules
+-__ActivatedRoutes__: Uses route.snapshot.params to pass crew/equipment ids to fetch details from their respective services.
+-__Models__: Uses TypeScript interfaces to create models for strong typing of Crew and Equipment
+-__Template Driven Forms__: Two-way databinding of new Crew/Equipment forms allow for instant preview of the details as you type them!
+
+## To Do (Future Improvements):
+
+- Implement styling that is more in line with TNG LCARS systems (More swooshy!).
+- Add a feature that reaches out to a third-party API.
+- Update data storage to a persitant database of some kind.
 
 ## Dependencies:
-[LCARS](https://github.com/joernweissenborn/lcars)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.7.
 
@@ -20,13 +32,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
 

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./equipment.component.css']
 })
 export class EquipmentComponent implements OnInit {
+  title = 'Equipment List';
   selectedEquipment: Equipment;
 
   constructor() { }
@@ -16,6 +17,7 @@ export class EquipmentComponent implements OnInit {
 
   onEquipmentSelected(equipment) {
     this.selectedEquipment = equipment;
+    console.log('selected: ', equipment)
   }
 
 }

@@ -32,7 +32,6 @@ export class CrewService {
     newCrew.id = this.crewList.length + 1;
     console.log('New Crew: ', newCrew);
     this.crewList.push(newCrew);
-    console.log(this.crewList);
   }
 
 } // end class

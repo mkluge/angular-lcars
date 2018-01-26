@@ -9,14 +9,12 @@ import { AfterContentInit } from '@angular/core/src/metadata/lifecycle_hooks';
 })
 export class CrewDetailsComponent implements OnInit {
   @Input() crew: Crew;
-  // fullName: string;
 
   constructor() { }
 
   ngOnInit() {}
 
   getFullname() {
-    console.log('Inside getFullName: ' + this.crew.surname);
     if (this.crew.isBajoran) {
       return this.crew.surname + ' ' + this.crew.givenName;
     }

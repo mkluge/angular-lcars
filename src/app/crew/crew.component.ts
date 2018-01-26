@@ -8,7 +8,7 @@ import { Crew } from '../_models/crew';
   styleUrls: ['./crew.component.css']
 })
 export class CrewComponent implements OnInit {
-  title: 'Crew List';
+  title = 'Crew List';
   selectedCrew: Crew;
 
   constructor() { }

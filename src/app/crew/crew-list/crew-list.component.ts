@@ -25,7 +25,9 @@ export class CrewListComponent implements OnInit {
     this.route.params.subscribe(event => {
       this.crewService
         .getOneCrew(this.route.snapshot.params['id'])
-        .then(crew => this.selectedCrew.emit(crew));
+        .then(crew => {
+          this.selectedCrew.emit(crew)
+        });
     });
   }
 
