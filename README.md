@@ -3,11 +3,11 @@
 This project started as an attempt to create a web app that uses the LCARS user interface from Star Trek: The Next Generation. Mostly to impress my 8-year-old self. It became an opportunity to show off my ability with Angular 2+ by developing a seemingly simple interface that follows a common pattern, but utilizes some useful Angular tricks. All content is lifted straight from [Memory Alpha](http://memory-alpha.wikia.com/wiki/Portal:Main)
 
 Features of this app:
-- __Modularity__: Both Crew and Equipment are self-contained modules
-- __Routing__: Each module has its own routing logic, AppRoutingModule defers Crew and Equipment routing to their respective routing modules
--__ActivatedRoutes__: Uses route.snapshot.params to pass crew/equipment ids to fetch details from their respective services.
--__Models__: Uses TypeScript interfaces to create models for strong typing of Crew and Equipment
--__Template Driven Forms__: Two-way databinding of new Crew/Equipment forms allow for instant preview of the details as you type them!
+* __Modularity__: Both Crew and Equipment are self-contained modules.
+* __Routing__: Each module has its own routing logic, AppRoutingModule defers Crew and Equipment routing to their respective routing modules.
+* __ActivatedRoutes__: Uses route.snapshot.params to pass crew/equipment ids to fetch details from their respective services.
+* __Models__: Uses TypeScript interfaces to create models for strong typing of Crew and Equipment.
+* __Template Driven Forms__: Two-way databinding of new Crew/Equipment forms allow for instant preview of the details as you type them!
 
 ## To Do (Future Improvements):
 
